@@ -8,15 +8,23 @@ import {
   deleteRecipeByID,
 } from "./recipes.js";
 
-import recipes from "recipes.json" assert {type: 'json'};
+// import recipes from "recipes.json" with {type: 'json'};
 
 const app = express();
 const PORT = 3000;
 
+// task 1
 app.get("/recipes", async (req,res) => {
   res.send(await getRecipes());
   
 })
+
+// task 2
+app.get("/recipes/:id", async (req,res) => {
+  res.send(await getRecipeByID());
+  
+})
+
 
 app.use(express.static("public"));
 app.use(express.json());
