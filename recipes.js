@@ -23,11 +23,9 @@ export async function getRecipeByID(requestId) {
         const jsonData = JSON.parse(data);
         {
             const index = jsonData.findIndex(({ id }) => id === requestId);
-            console.log(index)
             if (index === -1) {
             return { success: false, data: null };
         }
-    
         {
             return { success: true, data: jsonData[index]};
         }

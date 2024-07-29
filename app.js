@@ -21,7 +21,7 @@ app.get("/recipes", async (req,res) => {
 
 // task 2
 app.get("/recipes/:id", async (req,res) => {
-  res.send(await getRecipeByID());
+  res.send(await getRecipeByID(req.params.id));
   
 })
 
