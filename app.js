@@ -8,6 +8,10 @@ import {
   deleteRecipeByID,
 } from "./recipes.js";
 
+app.get("/recipes", async (req,res) => {
+  res.send(await getRecipes());
+})
+
 const app = express();
 const PORT = 3000;
 
