@@ -1,6 +1,8 @@
 import fs from "node:fs/promises";
 import { v4 as uuidv4 } from "uuid";
 
+export recipes from "recipes.json" assert {type: 'json'};
+
 const fileName = "recipes.json";
 
 // GET ALL RECIPES
